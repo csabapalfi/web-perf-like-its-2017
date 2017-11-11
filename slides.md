@@ -17,14 +17,7 @@ now: HomeAway.com
 # 🙋 
 How many people here are NOT web developers?
 
----
-
-# Modern web performance is a mess
-
-Google showing the way
-their business depends on it
-money spent on crawlers, haha
-build a mental model
+(or full-stack)
 
 ---
 
@@ -34,11 +27,13 @@ Today we're going to talk about...
 
 ## 😍 user-centric metrics
 
-## ⚗️ lab vs real-user monitoring
+## ⚗️ lab vs real users
 
 ---
 
-# ⚡ How fast is your site?
+# ⚡ How fast are you?
+
+Time to first byte <!-- .element: class="fragment" -->
 
 `DOMContentLoaded` <!-- .element: class="fragment" -->
 
@@ -56,19 +51,33 @@ Today we're going to talk about...
 
 🥃 smooth? <!-- .element: class="fragment" -->
 
-https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics
+---
+
+# 🛠️ How to measure?
+
+* LightHouse  <!-- .element: class="fragment" -->
+* WebpageTest.org  <!-- .element: class="fragment" -->
+* the browser!  <!-- .element: class="fragment" -->
 
 ---
 
 # 🔜 happening?
 
-* FP (Start render), FCP
+* Start render
+* `first-paint`
+* `first-contentful-paint`
 
 ---
 
 # 🤔 meaningful?
 
-* FMP, Hero element timing, (Speed Index, Visually Complete)
+* Visually Complete
+* Time to First Meaningful Paint
+* Hero Element Timing 
+
+Note:
+
+elementtiming
 https://speedcurve.com/blog/user-timing-and-custom-metrics/
 https://speedcurve.com/blog/web-performance-monitoring-hero-times/
 
@@ -76,7 +85,8 @@ https://speedcurve.com/blog/web-performance-monitoring-hero-times/
 
 # 👆 usable?
 
-* Custom event handlers added, First interactive, Consistently interative
+* User Timing `mark` (e.g. in `componentDidMount`)
+* Time to Interactive
 
 ---
 
@@ -89,6 +99,16 @@ https://speedcurve.com/blog/web-performance-monitoring-hero-times/
 filmstrip
 
 ---
+
+# How do you test?
+
+* locally
+* locally/lab with throttling CPU/network
+* real user monitoring
+
+---
+
+# How to measure
 
 # emoji 
 Is Lighthouse/Webpagetest.org accurate?
@@ -105,7 +125,6 @@ What do real users experience: RUM
 
 ---
 
-`PerformanceObserver` - tti, 
 
 ---
 
@@ -145,3 +164,5 @@ https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-bu
 
 
 http://mi.eng.cam.ac.uk/~cipolla/archive/Presentations/MakingPresentations.pdf
+
+https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics
