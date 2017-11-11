@@ -1,23 +1,16 @@
 # Web perf like it's 2017
 
-⚡ = 🤑
+Everything is changing so fast: new devices, JS framework of the day, the expectations of our users. How do we respond?
 
-SOASTA report, changing expectations, trend
-telemetry loss bias
+What's the current state of the art in web performance? What's worth measuring and how? What are some common pain points?
+Let's find out!
 
-## synthetic measurements
+## Speaker
 
-wpt, speedcurve, lighthouse
+Csaba is a contract full-stack developer currently helping HomeAway.com in building their landing pages.
 
-## chrome experience report
+## Purpose
 
-Google Chrome Experience report
+Popularize user-centric performance metrics + thinking
 
-
-## user centric performance metrics
-
-https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics
-
-https://github.com/SOASTA/boomerang
-
-## RUM
+Emphasize the importance of RUM
