@@ -24,7 +24,7 @@
 * gotchas: browser support
 * gotchas: load abandonment
 * keep synthetic in your pipeline
-* keep synthetic simple
+* keep synthetic simple - low SNR
 
 # summary
 * user-centric metrics + RUM rock
