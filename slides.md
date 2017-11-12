@@ -1,5 +1,7 @@
 # Web Perf like it's 2017
 
+Note:
+
 ---
 
 # 🤓 Csaba Palfi
@@ -12,6 +14,16 @@ ex-(Hotels.com • Yahoo! • FT.com • TES • trainline + YLD)
 
 now: HomeAway.com
 
+Note:
+
+doing web for around 10 years now at lots of different sites
+
+thanks to YLD for organizing the meetup
+
+consultant at HomeAway helping out with landing pages
+
+we care about performance
+
 ---
 
 # 🙋 
@@ -19,60 +31,102 @@ How many people here are NOT web developers?
 
 (or full-stack)
 
+Note:
+
+Any non-web developers
+
 ---
 
 Today we're going to talk about...
 
 ## ~~🤹 tips and tricks~~
 
-## 😍 user-centric metrics
-
-## ⚗️ lab vs real users
+## 📏 measurements
 
 ---
 
-# ⚡ What does 'fast' mean?
+...more specifically
 
-Time to first byte <!-- .element: class="fragment" -->
+## 😍 user-centric metrics <!-- .element: class="fragment" -->
 
-`DOMContentLoaded` <!-- .element: class="fragment" -->
+## 👥 real user-monitoring <!-- .element: class="fragment" -->
 
-`load` <!-- .element: class="fragment" -->
+---
+
+# 🏁 What is 'fast'?
+
+`DOMContentLoaded`? `load`? 
+
+a single metric won't do <!-- .element: class="fragment" -->
+
+user experience? <!-- .element: class="fragment" -->
 
 ---
 
 # 👫 How users think?
 
-🔜 happening? <!-- .element: class="fragment" -->
+---
 
-🤔 meaningful?  <!-- .element: class="fragment" -->
-
-👆 usable? <!-- .element: class="fragment" -->
-
-🥃 smooth? <!-- .element: class="fragment" -->
+![](img/happening_github.png)
 
 ---
 
-# 🛠️ Metrics from where?
+<div class="split">
 
-* LightHouse  <!-- .element: class="fragment" -->
-* WebpageTest.org  <!-- .element: class="fragment" -->
-* the browser!  <!-- .element: class="fragment" -->
+![](img/meaningful_ft-small.png)
+
+![](img/meaningful_ha-small.png)
+
+</div>
+
+---
+
+<!-- .slide: data-background-video="video/usable_ha.mp4" data-background-size="contain" data-background-video-loop="true"-->
+
+---
+
+# 👫 How users think?
+
+🔜 happening?
+
+🤔 meaningful?
+
+👆 usable?
+
+🥃 smooth?
+
+---
+
+# 🛠️ Metrics from?
+
+![](img/webpagetest.png)  <!-- .element: class="fragment" --> ![](img/lighthouse.png)  <!-- .element: class="fragment" -->
+
+![](img/browsers.png)  <!-- .element: class="fragment" -->
+
 
 ---
 
 # 🔜 happening?
 
-* Start render
-* `first-paint`
-* `first-contentful-paint`
+* first pixel on the screen?
+* Start render - WebPageTest.org
+
+---
+
+![](img/paint-timing.png)
+
+`first-paint` / `first-contentful-paint`
 
 ---
 
 # 🤔 meaningful?
 
-* Visually Complete
-* Time to First Meaningful Paint
+* Visually Complete - WebpageTest.org
+* Time to First Meaningful Paint - LightHouse
+
+---
+# 🤔 meaningful?
+
 * Hero Element Timing
 
 Note:
@@ -92,31 +146,38 @@ https://speedcurve.com/blog/web-performance-monitoring-hero-times/
 
 # 🥃 smooth?
 
-* absence of long tasks, input latency
+* Estimated Input Latency (LightHouse)
+
+* DIY in `eventListener`
+```js
+const lag =
+    performance.now() - 
+    event.timeStamp;
+```
 
 ---
 
-filmstrip
+![](img/long-task.png)
+
+https://w3c.github.io/longtasks/
 
 ---
 
----
+# 👫 User-centric metrics
 
-# 👫 How users think?
+🔜 happening? Start render, FP, FCP
 
-🔜 happening? FP, FCP
-
-🤔 meaningful? FMP, hero elements
+🤔 meaningful? Visually complete, FMP, hero elements
 
 👆 usable? custom marks, TTI
 
-🥃 smooth? long-tasks, input latency
+🥃 smooth? input latency, long-tasks
 
 ---
 
 # How do you measure?
 
-* your machine / tools
+* synthetic
 * real user monitoring
 
 ---
@@ -157,22 +218,4 @@ filmstrip
 
 ---
 
-# THE CUT
-
----
-
-# state of the web
-
-https://whatdoesmysitecost.com/#gniCost
-https://www.akamai.com/us/en/solutions/intelligent-platform/visualizing-akamai/internet-observatory/
-
----
-
-# budgets
-
-https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/
-
-
-http://mi.eng.cam.ac.uk/~cipolla/archive/Presentations/MakingPresentations.pdf
-
-https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics
+# Thanks, questions?

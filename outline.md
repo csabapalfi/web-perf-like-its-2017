@@ -3,7 +3,7 @@
 * let's talk web perf
 * csaba
 * audience
-* overview
+* overview: not tips but measurement
 
 # user-centric metrics
 

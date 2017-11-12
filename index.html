@@ -34,6 +34,31 @@
 			.reveal .progress {
 				height: 12px;
 			}
+
+			.split {
+				display: flex;
+				justify-content: space-around;
+			}
+			.reveal pre{
+				font-size: 1em;
+			}
+
+			.tools {
+				display: flex;
+			}
+			/* .slide-background.present[data-background-hash^="img"]:after
+ {
+				content: '';
+				top: 0;
+				left: 0;
+				z-index: 10;
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: absolute;
+				background: #000;
+				opacity: 0.5;
+			} */
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -69,6 +94,8 @@
 			Reveal.initialize({
 				history: true,
 				controls: false,
+				backgroundTransition: 'slide',
+				transitionSpeed: 'fast', 
 				slideNumber: 'c/t',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
