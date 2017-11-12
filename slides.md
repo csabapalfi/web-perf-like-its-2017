@@ -31,7 +31,7 @@ Today we're going to talk about...
 
 ---
 
-# ⚡ How fast are you?
+# ⚡ What does 'fast' mean?
 
 Time to first byte <!-- .element: class="fragment" -->
 
@@ -41,7 +41,7 @@ Time to first byte <!-- .element: class="fragment" -->
 
 ---
 
-# 👫 What users think?
+# 👫 How users think?
 
 🔜 happening? <!-- .element: class="fragment" -->
 
@@ -53,7 +53,7 @@ Time to first byte <!-- .element: class="fragment" -->
 
 ---
 
-# 🛠️ How to measure?
+# 🛠️ Metrics from where?
 
 * LightHouse  <!-- .element: class="fragment" -->
 * WebpageTest.org  <!-- .element: class="fragment" -->
@@ -73,7 +73,7 @@ Time to first byte <!-- .element: class="fragment" -->
 
 * Visually Complete
 * Time to First Meaningful Paint
-* Hero Element Timing 
+* Hero Element Timing
 
 Note:
 
@@ -85,7 +85,7 @@ https://speedcurve.com/blog/web-performance-monitoring-hero-times/
 
 # 👆 usable?
 
-* User Timing `mark` (e.g. in `componentDidMount`)
+* User Timing `mark`s
 * Time to Interactive
 
 ---
@@ -100,42 +100,52 @@ filmstrip
 
 ---
 
-# How do you test?
+---
 
-* locally
-* locally/lab with throttling CPU/network
+# 👫 How users think?
+
+🔜 happening? FP, FCP
+
+🤔 meaningful? FMP, hero elements
+
+👆 usable? custom marks, TTI
+
+🥃 smooth? long-tasks, input latency
+
+---
+
+# How do you measure?
+
+* your machine / tools
 * real user monitoring
 
 ---
 
-# How to measure
+# Ok, why RUM?
 
-# emoji 
-Is Lighthouse/Webpagetest.org accurate?
-
----
-
-#3G
+* not all users have the same experience
 
 ---
 
-Synthetic tests are most useful to see differences before/after deployment.
+# RUM challenges
 
-What do real users experience: RUM
-
----
-
+* measurement browser support
+* implementation lives in production code
+* telemetry loss bias
 
 ---
 
 # Load abandonment
 
-survivorship bias
-telemetry loss bias
+* track `visibilitychange`
+* small amount of blocking JS in `<head>`
 
 ---
 
-Browser support?
+# Synthetic
+
+* all the metrics
+* do it before production! (too)
 
 ---
 
