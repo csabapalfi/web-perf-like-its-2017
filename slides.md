@@ -183,8 +183,6 @@ long task: an event loop task that exceeds 50ms
 
 https://w3c.github.io/longtasks/ <!-- .element: class="fragment" data-fragment-index="1" -->
 
-
-
 --- 
 
 # Time to Interactive
@@ -211,6 +209,8 @@ const lag =
     event.timeStamp;
 ```
 
+* absence of long tasks
+
 <!-- .slide: data-background-color="#232323" -->
 
 ---
@@ -227,16 +227,13 @@ const lag =
 
 ---
 
-# How do you measure?
+# How to test?
 
-* synthetic
-* real user monitoring
+TODO - better title
 
----
+Start Render: 1s <span class="fragment">/ Visually complete: 2s</span> <span class="fragment">/ ...</span>
 
-# Ok, why RUM?
-
-* not all users have the same experience
+![](/img/fp_histogram.png) <!-- .element: class="fragment" -->
 
 ---
 
@@ -263,6 +260,8 @@ const lag =
 ---
 
 # Summary
+
+TODO better text
 
 * measure user centric metrics
 * use synthethic measurements in your pipeline
