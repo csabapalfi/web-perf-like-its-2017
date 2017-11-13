@@ -33,7 +33,11 @@ How many people here are NOT web developers?
 
 Note:
 
-Any non-web developers
+Any non-web developers? 
+
+Sorry, will try to make it interesting.
+
+Tell your friends
 
 ---
 
@@ -43,6 +47,12 @@ Today we're going to talk about...
 
 ## 📏 measurements
 
+Note:
+
+You can't improve what you can't measure.
+
+Gives you a mental model, too and helps optimizing.
+
 ---
 
 ...more specifically
@@ -50,6 +60,12 @@ Today we're going to talk about...
 ## 😍 user-centric metrics <!-- .element: class="fragment" -->
 
 ## 👥 real user-monitoring <!-- .element: class="fragment" -->
+
+Note:
+
+Leveraging performance metrics that affect user experience.
+
+Measuring the perception of real users in production.
 
 ---
 
@@ -103,7 +119,6 @@ user experience? <!-- .element: class="fragment" -->
 
 ![](img/browsers.png)  <!-- .element: class="fragment" -->
 
-
 ---
 
 # 🔜 happening?
@@ -123,11 +138,19 @@ user experience? <!-- .element: class="fragment" -->
 
 * Visually Complete - WebpageTest.org
 * Time to First Meaningful Paint - LightHouse
+* Speed Index - both
+
+Note:
+
+https://ldnwebperf.org/events/speed-perception-and-lighthouse/
 
 ---
-# 🤔 meaningful?
 
-* Hero Element Timing
+## Hero Element Timing
+
+![](img/hero-element-timing.png)
+
+<!-- .slide: data-background-color="#232323" -->
 
 Note:
 
