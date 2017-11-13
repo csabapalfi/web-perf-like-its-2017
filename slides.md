@@ -158,14 +158,28 @@ https://ldnwebperf.org/events/speed-perception-and-lighthouse/
 
 Note:
 
-https://docs.google.com/document/d/1yRYfYR1DnHtgwC4HRR04ipVVhT1h5gkI6yPmKCgJkyQ/edit#
-
 https://github.com/w3c/charter-webperf/issues/30
 
-https://github.com/tdresser/hero-element-polyfill
+[Spec Google Docs](https://docs.google.com/document/d/1yRYfYR1DnHtgwC4HRR04ipVVhT1h5gkI6yPmKCgJkyQ/edit#)
 
-https://speedcurve.com/blog/user-timing-and-custom-metrics/
-https://speedcurve.com/blog/web-performance-monitoring-hero-times/
+[SpeedCurve blogpost](https://speedcurve.com/blog/web-performance-monitoring-hero-times/)
+
+---
+
+## `tdresser/`
+## `hero-element-polyfill`
+
+2 weeks ago
+
+<!-- .slide: data-background-color="#232323" -->
+
+Note:
+
+* using MutationObserver 
+* and IntersectionObserver
+* [Github](https://github.com/tdresser/hero-element-polyfill)
+* [Google Groups Announcement](https://groups.google.com/a/chromium.org/forum/m/#!topic/progressive-web-metrics/ND6JVZRWqqg)
+* DIY [old SpeedCurve blogpost](https://speedcurve.com/blog/user-timing-and-custom-metrics/)
 
 ---
 
