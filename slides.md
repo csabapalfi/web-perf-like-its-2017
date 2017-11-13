@@ -2,27 +2,27 @@
 
 Note:
 
+* let's talk about web performance
+
 ---
 
 # 🤓 Csaba Palfi
 
 [@csabapalfi](https://twitter.com/csabapalfi)
 
-doing web for ~10 years
+doing web for ~10 years <!-- .element: class="fragment" data-fragment-index="1" -->
 
-ex-(Hotels.com • Yahoo! • FT.com • TES • trainline + YLD)
+ex-(Hotels.com • Yahoo! • FT.com • trainline + YLD...) <!-- .element: class="fragment" data-fragment-index="1" -->
 
-now: HomeAway.com
+now: HomeAway.com <!-- .element: class="fragment" -->
 
 Note:
 
-doing web for around 10 years now at lots of different sites
+* doing web for about 10 years, lots of different sites
 
-thanks to YLD for organizing the meetup
+* now: consultant at HomeAway 
 
-consultant at HomeAway helping out with landing pages
-
-we care about performance
+* helping out with landing pages, we care about performance
 
 ---
 
@@ -33,11 +33,11 @@ How many people here are NOT web developers?
 
 Note:
 
-Any non-web developers? 
+* any non-web developers? 
 
-Sorry, will try to make it interesting.
+* sorry, will try to make it interesting
 
-Tell your friends
+* tell your web-dev friends
 
 ---
 
@@ -49,9 +49,9 @@ Today we're going to talk about...
 
 Note:
 
-You can't improve what you can't measure.
+* you can't improve what you can't measure
 
-Gives you a mental model, too and helps optimizing.
+* chosing good measurements let you optimize optimize what matters
 
 ---
 
@@ -63,9 +63,11 @@ Gives you a mental model, too and helps optimizing.
 
 Note:
 
-Leveraging performance metrics that affect user experience.
+* some trends becoming more mainstream
 
-Measuring the perception of real users in production.
+* leveraging performance metrics that affect user experience the most
+
+* measuring performance on real users, in production
 
 ---
 
@@ -73,27 +75,144 @@ Measuring the perception of real users in production.
 
 `DOMContentLoaded`? `load`? 
 
-a single metric won't do <!-- .element: class="fragment" -->
+need more metrics!! <!-- .element: class="fragment" -->
 
-user experience? <!-- .element: class="fragment" -->
+Note:
+
+* is there a single event when the page is considered loaded?
+
+* the browser gives us `DOMContentLoaded` and `load`
+
+* DOM built - too early, all resources loaded, too late
 
 ---
 
-# How users think? <!-- .element: style="color: #fff" -->
+# 📏 Metrics from?
 
-<!-- .slide: data-background="img/bg-shutterstock_588274934.jpg" -->
+<!-- .slide: data-background-color="#232323" -->
+
+Note:
+
+* Let's look at some tools.
+
+---
+
+# webpagetest.org
+
+![](img/webpagetest-report.png)
+
+<!-- .slide: data-background-color="#181840" -->
+
+Note:
+
+* it's a website to run a free performance test 
+
+* in a real browser at various locations around the world
+
+* Open-source, too. You can even run your own instances
+
+---
+
+# Lighthouse
+
+![](img/lighthouse-report.png)
+
+Note:
+
+* perfomance audit tool from Google
+
+* right in Chrome devtools under the audits tab
+
+* since Chrome 60
+
+---
+
+![](img/browsers.png)
+
+
+```js
+const observer = new PerformanceObserver((list) => {
+        // ... list.getEntries()
+});
+
+observer.observe({entryTypes: ['resource']});
+```
+
+Note:
+
+* be notified of new performance entries...
+
+* as they are recorded in the browser's performance timeline
+
+* we'll look at some new entryTypes later
+
+* not in mobile Safari, under consideration for Edge
+
+---
+
+# 📏 ETOOMANYMETRICS
+
+<!-- .slide: data-background-color="#232323" -->
+
+Note:
+
+* How do we pick what to look at?
+
+---
+
+# 👫 What do users think?
+
+Note:
+
+* What if we put our user hat on...
+
+* and tried to think about performance...
+
+* in terms of questions the user might ask...
+
+* troughout the experience?
 
 ---
 
 <!-- .slide: data-background="img/happening_ha.png" data-background-size="contain" -->
 
+Note:
+
+* First thing: was the navigation successful? 
+
+* *is it happening?*
+
+* Is the page loading?
+
+* Is the server even responding?
+
 ---
 
-<!-- .slide: data-background="img/meaningful_ha-small.png" data-background-size="contain" -->
+<!-- .slide: data-background="img/meaningful_ha.png" data-background-size="contain" -->
+
+Note:
+
+* Next: has enough content rendered that I can make sense of the page? 
+
+* *is it meaningful?*
+
+* Do I see what I came here for?
+
+* Am I even on the right page?
 
 ---
 
 <!-- .slide: data-background-video="video/usable_ha.mp4" data-background-size="contain" data-background-video-loop="true" -->
+
+Note:
+
+* Then finally: can I interact with it? 
+
+* *is it usable?*
+
+* Also: are these interaction free of lag or jank?
+
+* *is it smooth?*
 
 ---
 
@@ -107,15 +226,15 @@ user experience? <!-- .element: class="fragment" -->
 
 🥃 smooth?
 
----
+Note:
 
-# 🛠️ Metrics from?
+* These questions capture how the users are looking for:
 
-![](img/webpagetest.png)  <!-- .element: class="fragment" --> ![](img/speedcurve.png)  <!-- .element: class="fragment" --> ![](img/lighthouse.png)  <!-- .element: class="fragment" -->
+* visual feedback and reassurance
 
-![](img/browsers-2.png)  <!-- .element: class="fragment" -->
+* that everything's going OK.
 
-<!-- .slide: data-background-color="#232323" -->
+Let's look at metrics?
 
 ---
 
