@@ -83,15 +83,15 @@ user experience? <!-- .element: class="fragment" -->
 
 ---
 
-![](img/happening_github.png)
+<!-- .slide: data-background="img/happening_ha.png" data-background-size="contain" -->
 
 ---
 
-![](img/meaningful_ft-small.png)
+<!-- .slide: data-background="img/meaningful_ha-small.png" data-background-size="contain" -->
 
 ---
 
-<!-- .slide: data-background-video="video/usable_ha.mp4" data-background-size="contain" data-background-video-loop="true"-->
+<!-- .slide: data-background-video="video/usable_ha.mp4" data-background-size="contain" data-background-video-loop="true" -->
 
 ---
 
