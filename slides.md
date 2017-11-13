@@ -113,7 +113,7 @@ user experience? <!-- .element: class="fragment" -->
 
 ![](img/webpagetest.png)  <!-- .element: class="fragment" --> ![](img/speedcurve.png)  <!-- .element: class="fragment" --> ![](img/lighthouse.png)  <!-- .element: class="fragment" -->
 
-![](img/browsers.png)  <!-- .element: class="fragment" -->
+![](img/browsers-2.png)  <!-- .element: class="fragment" -->
 
 <!-- .slide: data-background-color="#232323" -->
 
@@ -231,6 +231,8 @@ const lag =
 
 # 👫 User-centric metrics
 
+TODO: table or something
+
 🔜 happening? Start render, FP, FCP
 
 🤔 meaningful? Visually complete, FMP, hero elements
@@ -253,9 +255,13 @@ Start Render: 1s <span class="fragment">/ Visually complete: 2s</span> <span cla
 
 # RUM challenges
 
-* measurement browser support
-* implementation lives in production code
+* implementation in production code
 * telemetry loss bias
+* browser support for metrics
+
+---
+
+# Web perf like it's 2025
 
 ---
 
@@ -268,7 +274,6 @@ Start Render: 1s <span class="fragment">/ Visually complete: 2s</span> <span cla
 
 # Synthetic
 
-* all the metrics
 * do it before production! (too)
 
 ---
