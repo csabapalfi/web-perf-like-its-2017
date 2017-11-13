@@ -87,13 +87,7 @@ user experience? <!-- .element: class="fragment" -->
 
 ---
 
-<div class="split">
-
 ![](img/meaningful_ft-small.png)
-
-![](img/meaningful_ha-small.png)
-
-</div>
 
 ---
 
@@ -115,20 +109,26 @@ user experience? <!-- .element: class="fragment" -->
 
 # 🛠️ Metrics from?
 
-![](img/webpagetest.png)  <!-- .element: class="fragment" --> ![](img/lighthouse.png)  <!-- .element: class="fragment" -->
+![](img/webpagetest.png)  <!-- .element: class="fragment" --> ![](img/speedcurve.png)  <!-- .element: class="fragment" --> ![](img/lighthouse.png)  <!-- .element: class="fragment" -->
 
 ![](img/browsers.png)  <!-- .element: class="fragment" -->
 
+<!-- .slide: data-background-color="#232323" -->
+
 ---
 
-# 🔜 happening?
+# <span style="filter: invert(100%);">🔜</span> happening?
 
 * first pixel on the screen?
-* Start render - WebPageTest.org
+* Start render - WebPageTest
+
+<!-- .slide: data-background-color="#232323" -->
 
 ---
 
 ![](img/paint-timing.png)
+
+https://w3c.github.io/paint-timing/
 
 `first-paint` / `first-contentful-paint`
 
@@ -140,13 +140,15 @@ user experience? <!-- .element: class="fragment" -->
 * Time to First Meaningful Paint - LightHouse
 * Speed Index - both
 
+<!-- .slide: data-background-color="#232323" -->
+
 Note:
 
 https://ldnwebperf.org/events/speed-perception-and-lighthouse/
 
 ---
 
-## Hero Element Timing
+# Hero Element Timing
 
 ![](img/hero-element-timing.png)
 
@@ -154,7 +156,12 @@ https://ldnwebperf.org/events/speed-perception-and-lighthouse/
 
 Note:
 
-elementtiming
+https://docs.google.com/document/d/1yRYfYR1DnHtgwC4HRR04ipVVhT1h5gkI6yPmKCgJkyQ/edit#
+
+https://github.com/w3c/charter-webperf/issues/30
+
+https://github.com/tdresser/hero-element-polyfill
+
 https://speedcurve.com/blog/user-timing-and-custom-metrics/
 https://speedcurve.com/blog/web-performance-monitoring-hero-times/
 
@@ -163,7 +170,28 @@ https://speedcurve.com/blog/web-performance-monitoring-hero-times/
 # 👆 usable?
 
 * User Timing `mark`s
+
+<!-- .slide: data-background-color="#232323" -->
+
+--- 
+
+# 👆 usable?
+
 * Time to Interactive
+
+<!-- .slide: data-background-color="#232323" -->
+
+Note:
+
+https://github.com/GoogleChromeLabs/tti-polyfill
+
+---
+
+
+![](img/long-task.png)
+
+https://w3c.github.io/longtasks/
+
 
 ---
 
@@ -178,11 +206,7 @@ const lag =
     event.timeStamp;
 ```
 
----
-
-![](img/long-task.png)
-
-https://w3c.github.io/longtasks/
+<!-- .slide: data-background-color="#232323" -->
 
 ---
 
