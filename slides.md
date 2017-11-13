@@ -79,7 +79,9 @@ user experience? <!-- .element: class="fragment" -->
 
 ---
 
-# 👫 How users think?
+# How users think? <!-- .element: style="color: #fff" -->
+
+<!-- .slide: data-background="img/bg-shutterstock_588274934.jpg" -->
 
 ---
 
@@ -173,25 +175,28 @@ https://speedcurve.com/blog/web-performance-monitoring-hero-times/
 
 <!-- .slide: data-background-color="#232323" -->
 
+---
+
+long task: an event loop task that exceeds 50ms
+
+![](img/long-task.png) <!-- .element: class="fragment" data-fragment-index="1" -->
+
+https://w3c.github.io/longtasks/ <!-- .element: class="fragment" data-fragment-index="1" -->
+
+
+
 --- 
 
-# 👆 usable?
+# Time to Interactive
 
-* Time to Interactive
+![](img/tti.png)
 
 <!-- .slide: data-background-color="#232323" -->
 
 Note:
 
+https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c/preview#
 https://github.com/GoogleChromeLabs/tti-polyfill
-
----
-
-
-![](img/long-task.png)
-
-https://w3c.github.io/longtasks/
-
 
 ---
 
