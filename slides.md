@@ -553,7 +553,7 @@ Note:
 
 # 😵 survirvorship bias
 
-track `visibilitychange`  <!-- .element: class="fragment" -->
+<span class="fragment">track `visibilitychange`<span>
 
 Note:
 
@@ -562,6 +562,18 @@ Note:
 * good browser support
 
 * small amount of blocking JS in `<head>`
+
+---
+
+<!-- .slide: data-background="img/mobile-throw.gif" -->
+
+Note:
+
+* sometimes even that might not work
+
+* did `visibilitychange` fire there?
+
+* now let's talk about what makes me feel like that?
 
 ---
 
