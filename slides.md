@@ -51,7 +51,7 @@ Note:
 
 * you can't improve what you can't measure
 
-* chosing good measurements let you optimize optimize what matters
+* chosing good measurements lets you optimize optimize what matters
 
 ---
 
@@ -63,7 +63,7 @@ Note:
 
 Note:
 
-* some trends becoming more mainstream
+* these trends becoming more mainstream
 
 * leveraging performance metrics that affect user experience the most
 
@@ -75,92 +75,19 @@ Note:
 
 `DOMContentLoaded`? `load`? 
 
-need more metrics!! <!-- .element: class="fragment" -->
+nothing to do with UX <!-- .element: class="fragment" data-fragment-index="1" -->
 
 Note:
 
 * is there a single event when the page is considered loaded?
 
-* the browser gives us `DOMContentLoaded` and `load`
-
 * DOM built - too early, all resources loaded, too late
 
----
-
-# 📏 Metrics from?
-
-<!-- .slide: data-background-color="#232323" -->
-
-Note:
-
-* Let's look at some tools.
+* let's try something else
 
 ---
 
-# webpagetest.org
-
-![](img/webpagetest-report.png)
-
-<!-- .slide: data-background-color="#181840" -->
-
-Note:
-
-* it's a website to run a free performance test 
-
-* in a real browser at various locations around the world
-
-* Open-source, too. You can even run your own instances
-
----
-
-# Lighthouse
-
-![](img/lighthouse-report.png)
-
-Note:
-
-* perfomance audit tool from Google
-
-* right in Chrome devtools under the audits tab
-
-* since Chrome 60
-
----
-
-![](img/browsers.png)
-
-
-```js
-const observer = new PerformanceObserver((list) => {
-        // ... list.getEntries()
-});
-
-observer.observe({entryTypes: ['resource']});
-```
-
-Note:
-
-* be notified of new performance entries...
-
-* as they are recorded in the browser's performance timeline
-
-* we'll look at some new entryTypes later
-
-* not in mobile Safari, under consideration for Edge
-
----
-
-# 📏 ETOOMANYMETRICS
-
-<!-- .slide: data-background-color="#232323" -->
-
-Note:
-
-* How do we pick what to look at?
-
----
-
-# 👫 What do users think?
+# 👫 How users think?
 
 Note:
 
@@ -208,7 +135,7 @@ Note:
 
 * Then finally: can I interact with it? 
 
-* *is it usable?*
+* *is it usable?* (esp. travel site/search)
 
 * Also: are these interaction free of lag or jank?
 
@@ -228,22 +155,98 @@ Note:
 
 Note:
 
-* These questions capture how the users are looking for:
+* captures how the users are looking for:
 
 * visual feedback and reassurance
 
 * that everything's going OK.
 
-Let's look at metrics?
+---
+
+# ⏱️ Metrics from?
+
+<!-- .slide: data-background-color="#232323" -->
+
+Note:
+
+* Where do we get metrics from?
+
+* Let's look at some tools first.
+
+---
+
+# webpagetest.org
+
+![](img/webpagetest-report.png)
+
+<!-- .slide: data-background-color="#181840" -->
+
+Note:
+
+* website to run a free performance tests
+
+* in a real browser from various locations
+
+* open-source, can run your own instances
+
+---
+
+# Lighthouse
+
+![](img/lighthouse-report.png)
+
+Note:
+
+* perfomance audit tool from Google
+
+* right in Chrome DevTools under the Audits tab
+
+* since Chrome 60
+
+---
+
+![](img/browsers.png)
+
+
+```js
+const observer = new PerformanceObserver((list) => {
+        // ... list.getEntries()
+});
+
+observer.observe({entryTypes: ['resource']});
+```
+
+<!-- .slide: data-background-color="#232323" -->
+
+Note:
+
+* be notified of new performance entries...
+
+* as they are recorded in the browser's performance timeline
+
+* we'll look at some new entryTypes later
+
+* not in mobile Safari or Edge
 
 ---
 
 # <span style="filter: invert(100%);">🔜</span> happening?
 
-* first pixel on the screen?
-* Start render - WebPageTest
+first pixel on the screen? 
+
+Start Render - webpagetest.org <!-- .element: class="fragment" data-fragment-index="1" -->
+
+N/A explicitly - LightHouse <!-- .element: class="fragment" data-fragment-index="1" -->
 
 <!-- .slide: data-background-color="#232323" -->
+
+Note:
+
+* This could be delayed by things like
+
+* slow time-to-first-byte, render-blocking assets
+
+* but this metric captures: visual feedback
 
 ---
 
@@ -251,25 +254,70 @@ Let's look at metrics?
 
 https://w3c.github.io/paint-timing/
 
-`first-paint` / `first-contentful-paint`
+`entryTypes: ['paint']` <!-- .element: class="fragment" -->
+
+<div>`first-paint`</div> <!-- .element: class="fragment" -->
+
+Note:
+
+* coming to the browser - chrome 60+
+
+* remember PerformanceObserver?
 
 ---
 
 # 🤔 meaningful?
 
-* Visually Complete - WebpageTest.org
-* Time to First Meaningful Paint - LightHouse
-* Speed Index - both
+above the fold rendered?
+
+Visually Complete - webpagetest.org <!-- .element: class="fragment" -->
+
+Time to First Meaningful Paint - LightHouse <!-- .element: class="fragment" -->
 
 <!-- .slide: data-background-color="#232323" -->
 
 Note:
 
-https://ldnwebperf.org/events/speed-perception-and-lighthouse/
+* focusing on above the fold (ATF) content
+
+* VC - 90% pixels ATF no longer changing
+
+* FMP - paint that follows biggest ATF layout change + webfonts
 
 ---
 
-# Hero Element Timing
+## hero elements
+
+Neither in webpagetest.org or LightHouse <!-- .element: class="fragment" -->
+
+![](img/hero_ft.png) ![](img/hero_ha.png)
+
+Note:
+
+* VC + FMP gives all elements the same importance
+
+* some elements matter more
+
+* that could be different on each site
+
+---
+
+## `tdresser/`
+## `hero-element-polyfill`
+
+<!-- .slide: data-background-color="#232323" -->
+
+Note:
+
+* using `MutationObserver` and `IntersectionObserver`
+
+* popped up chromium forum, around a month ago
+
+* really new, haven't tried
+
+---
+
+![](img/speedcurve.png)
 
 ![](img/hero-element-timing.png)
 
@@ -277,134 +325,261 @@ https://ldnwebperf.org/events/speed-perception-and-lighthouse/
 
 Note:
 
-https://github.com/w3c/charter-webperf/issues/30
+* SpeedCurve is a paid for product built around WPT
 
-[Spec Google Docs](https://docs.google.com/document/d/1yRYfYR1DnHtgwC4HRR04ipVVhT1h5gkI6yPmKCgJkyQ/edit#)
+* introduced neat hero element timing support
 
-[SpeedCurve blogpost](https://speedcurve.com/blog/web-performance-monitoring-hero-times/)
-
----
-
-## `tdresser/`
-## `hero-element-polyfill`
-
-2 weeks ago
-
-<!-- .slide: data-background-color="#232323" -->
-
-Note:
-
-* using MutationObserver 
-* and IntersectionObserver
-* [Github](https://github.com/tdresser/hero-element-polyfill)
-* [Google Groups Announcement](https://groups.google.com/a/chromium.org/forum/m/#!topic/progressive-web-metrics/ND6JVZRWqqg)
-* DIY [old SpeedCurve blogpost](https://speedcurve.com/blog/user-timing-and-custom-metrics/)
+* used by us
 
 ---
 
 # 👆 usable?
 
-* User Timing `mark`s
+is JS to make things work loaded?
 
-<!-- .slide: data-background-color="#232323" -->
+https://www.w3.org/TR/user-timing/ <!-- .element: class="fragment" data-fragment-index="1" -->
 
----
-
-long task: an event loop task that exceeds 50ms
-
-![](img/long-task.png) <!-- .element: class="fragment" data-fragment-index="1" -->
-
-https://w3c.github.io/longtasks/ <!-- .element: class="fragment" data-fragment-index="1" -->
-
---- 
-
-# Time to Interactive
-
-![](img/tti.png)
+```js
+        componentDidMount() {
+            performance.mark("datepicker.active");
+        }
+``` 
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 <!-- .slide: data-background-color="#232323" -->
 
 Note:
 
-https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c/preview#
-https://github.com/GoogleChromeLabs/tti-polyfill
+* most interaction will require JS
+
+* has that been loaded?
+
+* can use the User Timing API to mark this 
+
+---
+
+# 👆 usable?
+
+are long tasks blocking the main thread?
+
+![](img/main-thread.png)
+
+<!-- .slide: data-background-color="#232323" -->
+
+Note:
+
+* the browser responds to user input by adding tasks to a task queue
+
+* the main thread will then execute them one by one
+
+* your apps JS will execute on the main thread
+
+* this can block the main thread like our react app booting there
+
+---
+
+## First Interactive
+
+both in webpagetest.org and Lighthouse
+
+(Time to Interactive)
+
+<!-- .slide: data-background-color="#232323" -->
+
+Note:
+
+* how quickly the main thread gets quiet?
+
+* quiet enough to handle user input
+
+* sometimes called TTI, 
+
+* another metric about consistently interactive
+
+---
+
+![](img/long-task.png)
+
+https://w3c.github.io/longtasks/
+
+`entryTypes: ['longtask']` <!-- .element: class="fragment" -->
+
+long task: an event loop task that exceeds 50ms <!-- .element: class="fragment" -->
+
+Note:
+
+* long tasks are available in the browser: Chrome 58+
+
+* good old PerformanceObserver
+
+* does attribution, too
+
+---
+
+## `GoogleChromeLabs/`
+## `tti-polyfill`
+
+<!-- .slide: data-background-color="#232323" -->
+
+Note:
+
+* Now we can also implement tti!
+
+* haven't tried, yet
 
 ---
 
 # 🥃 smooth?
 
-* Estimated Input Latency (LightHouse)
+`eventListener`s execute quickly?
 
-* DIY in `eventListener`
-```js
-const lag =
-    performance.now() - 
-    event.timeStamp;
-```
+Estimated Input Latency - LightHouse <!-- .element: class="fragment" data-fragment-index="1" -->
 
-* absence of long tasks
+N/A - webpagetest.org <!-- .element: class="fragment" data-fragment-index="1" -->
+
+`performance.now() - event.timeStamp;` <!-- .element: class="fragment" -->
 
 <!-- .slide: data-background-color="#232323" -->
 
+Note:
+
+* from when the event was created until eventListener called
+
+* not in WPT
+
+* can do a bit of a DIY solution, too :D
 ---
 
-# 👫 User-centric metrics
+# 🥃 smooth?
 
-TODO: table or something
+watch out for track long tasks
 
-🔜 happening? Start render, FP, FCP
+<!-- .slide: data-background-color="#232323" -->
 
-🤔 meaningful? Visually complete, FMP, hero elements
+Note:
 
-👆 usable? custom marks, TTI
+* we can also just track long tasks
 
-🥃 smooth? input latency, long-tasks
+* #1 cause of jank or lag
+
+* typical offenders are thirdparty scripts, marketing tags
 
 ---
 
-# How to test?
+|    | WebpageTest | LightHouse  | Chrome |
+| ------------- |-------------| -----|----|
+| happening? <span style="filter: invert(100%);">🔜</span> | Start Render | N/A | `first-paint` |
+| meaningful? 🤔 | Visually Complete | First Meaningful Paint | `hero-timing-polyfill` |
+|  usable? <br> 👆 | First Interactive | First Interactive| `tti-polyfill` |
+| smooth? <br> 🥃  | N/A | Input Latency |  `long-tasks` |
 
-TODO - better title
+<!-- .slide: data-background-color="#232323" -->
 
-Start Render: 1s <span class="fragment">/ Visually complete: 2s</span> <span class="fragment">/ ...</span>
+Note:
+
+* quick recap
+
+* yay, in most environments we can answer these questions!
+
+* brower is actually just Chrome :(
+
+---
+
+# 🔬 Let's test!
+
+<span class="fragment">`first-paint`: 0.5s</span> <span class="fragment">/ ...</span>
 
 ![](/img/fp_histogram.png) <!-- .element: class="fragment" -->
 
----
+Note:
 
-# RUM challenges
+* happy days, let's run tests...
 
-* implementation in production code
-* telemetry loss bias
-* browser support for metrics
+* get a single number for each
 
----
+* in reality it's a collection of all times from all users
 
-# Web perf like it's 2025
+* more accurately represented by a histogram
 
 ---
 
-# Load abandonment
+# synthetic 
+# vs 
+# real-user monitoring
 
-* track `visibilitychange`
+Note:
+
+* synthetic: I'm making a request
+
+* report metrics about real users in production
+
+* sometimes called RUM
+
+---
+
+# 👋 RUM in your browser
+
+Note:
+
+* got to be reliable, not messing up performance
+
+* synthetic has all the time to analyze traces/screenshots, etc
+
+---
+
+# 😵 survirvorship bias
+
+track `visibilitychange`  <!-- .element: class="fragment" -->
+
+Note:
+
+* use `visibilitychange` to track load abandonment
+
+* good browser support
+
 * small amount of blocking JS in `<head>`
 
 ---
 
-# Synthetic
+# 😱 browser support
 
-* do it before production! (too)
+Web Perf like it's 2020 <!-- .element: class="fragment" -->
+
+Note:
+
+* if my talk was just about RUM
+
+* it might as well be 2025
+
+
+---
+
+# 🍻 Synthetic & RUM
+
+Note:
+
+* they complement each other
+
+* run synthetic test in your pipeline to prevent regression
+
+* verify on production with RUM (and maybe synthetic, too) 
 
 ---
 
 # Summary
 
-TODO better text
+think about performance in terms UX <!-- .element: class="fragment" -->
 
-* measure user centric metrics
-* use synthethic measurements in your pipeline
-* validate/track real users in production
+leverage user-centric metrics <!-- .element: class="fragment" -->
+
+use synthethic testing to prevent regressions <!-- .element: class="fragment" -->
+
+verify your performance with real user monitoring <!-- .element: class="fragment" -->
 
 ---
 
-# Thanks, questions?
+# Thanks! 
+
+# Questions?
+
+@csabapalfi
