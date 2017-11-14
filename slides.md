@@ -1,5 +1,9 @@
 # Web Perf like it's 2017
 
+# ⚡ = 💰  <!-- .element: class="fragment" -->
+
+fast or driving customers away <!-- .element: class="fragment" -->
+
 Note:
 
 * web performance is money
@@ -490,14 +494,7 @@ Note:
 
 ---
 
-|    | WebpageTest | LightHouse  | Chrome |
-| ------------- |-------------| -----|----|
-| happening? <span style="filter: invert(100%);">🔜</span> | Start Render | N/A | `first-paint` |
-| meaningful? 🤔 | Visually Complete | First Meaningful Paint | `hero-timing-polyfill` |
-|  usable? <br> 👆 | First Interactive | First Interactive| `tti-polyfill` |
-| smooth? <br> 🥃  | N/A | Input Latency |  `long-tasks` |
-
-<!-- .slide: data-background-color="#232323" -->
+<!-- .slide: data-background="img/re-cap.png" data-background-size="contain" -->
 
 Note:
 
