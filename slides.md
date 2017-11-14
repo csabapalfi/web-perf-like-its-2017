@@ -45,13 +45,13 @@ Today we're going to talk about...
 
 ## ~~🤹 tips and tricks~~
 
-## 📏 measurements
+## ⏱️ measurements
 
 Note:
 
 * you can't improve what you can't measure
 
-* chosing good measurements lets you optimize optimize what matters
+* chosing good measurements lets you optimize what matters
 
 ---
 
