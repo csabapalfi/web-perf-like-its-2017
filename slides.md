@@ -232,6 +232,22 @@ Note:
 
 ---
 
+# 👫 How users think?
+
+🔜 happening?
+
+🤔 meaningful?
+
+👆 usable?
+
+🥃 smooth?
+
+Note:
+
+* back to our handy questions...
+
+---
+
 # <span style="filter: invert(100%);">🔜</span> happening?
 
 first pixel on the screen? 
@@ -244,11 +260,11 @@ N/A explicitly - LightHouse <!-- .element: class="fragment" data-fragment-index=
 
 Note:
 
-* This could be delayed by things like
-
-* slow time-to-first-byte, render-blocking assets
+* affected by slow time-to-first-byte, render-blocking assets
 
 * but this metric captures: visual feedback
+
+* do browsers have this?
 
 ---
 
