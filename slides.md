@@ -512,7 +512,7 @@ Note:
 
 <span class="fragment">`first-paint`: 0.5s</span> <span class="fragment">/ ...</span>
 
-![](/img/fp_histogram.png) <!-- .element: class="fragment" -->
+![](img/fp_histogram.png) <!-- .element: class="fragment" -->
 
 Note:
 
