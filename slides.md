@@ -6,6 +6,8 @@ fast or driving customers away <!-- .element: class="fragment" -->
 
 Note:
 
+* why web performance?
+
 * web performance is money
 
 * fast pages convert users to customers
