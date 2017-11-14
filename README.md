@@ -2,7 +2,8 @@
 
 Everything is changing so fast: new devices, JS framework of the day, the expectations of our users. How do we respond?
 
-What's the current state of the art in web performance? What's worth measuring and how? What are some common pain points?
+What's the current state of the art in web performance analytics? What's worth measuring and how? What are some common pain points?
+
 Let's find out!
 
 ## Speaker

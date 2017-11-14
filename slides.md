@@ -8,7 +8,7 @@ Note:
 
 * why web performance?
 
-* web performance is money
+* lots of research into this proving
 
 * fast pages convert users to customers
 
