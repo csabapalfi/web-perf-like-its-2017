@@ -10,9 +10,9 @@ Note:
 
 [@csabapalfi](https://twitter.com/csabapalfi)
 
-doing web for ~10 years <!-- .element: class="fragment" data-fragment-index="1" -->
+doing web for ~10 years
 
-ex-(Hotels.com • Yahoo! • FT.com • trainline + YLD...) <!-- .element: class="fragment" data-fragment-index="1" -->
+ex-(Hotels.com • Yahoo! • FT.com • trainline + YLD...)
 
 now: HomeAway.com <!-- .element: class="fragment" -->
 
@@ -398,9 +398,9 @@ Note:
 
 ## First Interactive
 
-both in webpagetest.org and Lighthouse
+both in webpagetest.org and Lighthouse <!-- .element: class="fragment" -->
 
-(Time to Interactive)
+![](img/first-interactive.png)
 
 <!-- .slide: data-background-color="#232323" -->
 
@@ -410,9 +410,9 @@ Note:
 
 * quiet enough to handle user input
 
-* sometimes called TTI, 
+* sometimes called TTI
 
-* another metric about consistently interactive
+* another metric: consistently interactive
 
 ---
 
@@ -444,6 +444,8 @@ Note:
 * Now we can also implement tti!
 
 * haven't tried, yet
+
+* Chrome 58+
 
 ---
 
