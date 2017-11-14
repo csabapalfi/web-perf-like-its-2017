@@ -30,7 +30,7 @@ Note:
 
 * doing web for about 10 years, lots of different sites
 
-* now: consultant at HomeAway 
+* now: consultant at HomeAway, vacation rentals
 
 * helping out with landing pages, we care about performance
 
