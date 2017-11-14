@@ -353,7 +353,7 @@ Note:
 
 # 👆 usable?
 
-is JS to make things work loaded?
+loaded JS to make things work?
 
 https://www.w3.org/TR/user-timing/ <!-- .element: class="fragment" data-fragment-index="1" -->
 
