@@ -2,7 +2,11 @@
 
 Note:
 
-* let's talk about web performance
+* web performance is money
+
+* fast pages convert users to customers
+
+* either fast or it'll drive customers away
 
 ---
 
