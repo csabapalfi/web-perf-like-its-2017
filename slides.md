@@ -171,6 +171,8 @@ Note:
 
 * Where do we get metrics from?
 
+* Before we associate individual metrics.
+
 * Let's look at some tools first.
 
 ---
