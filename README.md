@@ -6,7 +6,7 @@ What's the current state of the art in web performance analytics? What's worth m
 
 Let's find out!
 
-## slides
+# slides
 
 Slides built with reveal.js, hosted via Github Pages:
 
