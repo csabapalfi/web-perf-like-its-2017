@@ -111,6 +111,10 @@ Speed Index a metric not mentioned in the talk but related to measuring renderin
 
 [Definition - Estimated Input Latency - Lighthouse](https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency)
 
+## all together now
+
+![](img/re-cap.png)
+
 ## 👥 real user monitoring
 
 [Example - tracking `first-paint` with Google Analytics](https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics#tracking_fpfcp) - watch out! this is Chrome 60+ only
