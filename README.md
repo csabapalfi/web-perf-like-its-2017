@@ -12,15 +12,15 @@ Slides built with reveal.js, hosted via Github Pages:
 
 https://csabapalfi.github.io/web-perf-like-its-2017/
 
-## references
+# references
 
-### ⚡ = 💰 performance is money
+## ⚡ = 💰 performance is money
 
 [Akamai Online Retail Performance Report: Milliseconds Are Critical](https://www.akamai.com/uk/en/about/news/press/2017-press/akamai-releases-spring-2017-state-of-online-retail-performance-report.jsp)
 
 [The State of Online Retail Performance | Spring 2017 Akamai - Soasta - PDF](https://www.soasta.com/wp-content/uploads/2017/04/State-of-Online-Retail-Performance-Spring-2017.pdf)
 
-### 🤓 about me
+## 🤓 about me
 
 [@csabapalfi](https://twitter.com/csabapalfi) on twitter
 
@@ -28,19 +28,19 @@ used to work with [YLD](https://www.yld.io/) who organized the meetup
 
 my current main client: [HomeAway.com](https://www.homeaway.com/)
 
-### 🏁 'classic' metrics
+## 🏁 'classic' metrics
 
 [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded)
 
 [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) or more specifically `window.load`
 
-### 👫 user-centric metrics
+## 👫 user-centric metrics
 
 the idea from [Leveraging the Performance Metrics that Most Affect User Experience](https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics) by @philipwalton / Google
 
 🔜 is it happening? 🤔 is it meaningful? 👆 is it usable? 🥃 is it smooth?
 
-### ⏱️ metrics from
+## ⏱️ metrics from
 
 [WebpageTest.org](https://www.webpagetest.org/) 
 (also [WPO-Foundation/webpagetest](https://github.com/WPO-Foundation/webpagetest) on GitHub)
@@ -50,13 +50,13 @@ the idea from [Leveraging the Performance Metrics that Most Affect User Experien
 
 [`PerformanceObserver`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver) in the browser
 
-### 🔜 first pixel on the screen?
+## 🔜 first pixel on the screen?
 
 [Definition - Start Render - webpagetest](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics)
 
 [Spec - Paint Timing](https://w3c.github.io/paint-timing/)
 
-### 🤔 above the fold rendered?
+## 🤔 above the fold rendered?
 
 [Definition - Visually Complete - webpagetest](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index) - this is on the Speed Index page of the docs
 
@@ -65,7 +65,7 @@ the idea from [Leveraging the Performance Metrics that Most Affect User Experien
 [Spec - First Meaningful Paint](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view)
 
 
-### 🤔 speed index
+## 🤔 speed index
 
 Speed Index a metric not mentioned in the talk but related to measuring rendering progress.
 
@@ -75,7 +75,7 @@ Speed Index a metric not mentioned in the talk but related to measuring renderin
 
 [Speed Perception and Lighthouse](https://ldnwebperf.org/events/speed-perception-and-lighthouse/) by @estelle - LdnWebPerf talk about Speed index
 
-### 🤔 hero element timing
+## 🤔 hero element timing
 
 [W3C github issue - Element Timing API](https://github.com/w3c/charter-webperf/issues/30)
 
@@ -85,7 +85,7 @@ Speed Index a metric not mentioned in the talk but related to measuring renderin
 
 [Polyfill - Hero Element Timing](https://github.com/tdresser/hero-element-polyfill) - see also the [announcement here](https://groups.google.com/a/chromium.org/forum/m/#!topic/progressive-web-metrics/ND6JVZRWqqg)
 
-### 👆 JS loaded to make elements interactive?
+## 👆 JS loaded to make elements interactive?
 
 [Spec - User Timing](https://www.w3.org/TR/user-timing/)
 
@@ -95,7 +95,7 @@ Speed Index a metric not mentioned in the talk but related to measuring renderin
         }
 ``` 
 
-### 👆 first interactive (time to interactive)
+## 👆 first interactive (time to interactive)
 
 [Definition - Time to Interactie - webpagetest](https://github.com/WPO-Foundation/webpagetest/blob/master/docs/Metrics/TimeToInteractive.md)
 
@@ -107,15 +107,15 @@ Speed Index a metric not mentioned in the talk but related to measuring renderin
 
 [Polyfill - First Interactive](https://github.com/GoogleChromeLabs/tti-polyfill)
 
-### 🥃 input latency
+## 🥃 input latency
 
 [Definition - Estimated Input Latency - Lighthouse](https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency)
 
-### 👥 real user monitoring
+## 👥 real user monitoring
 
 [Example - tracking `first-paint` with Google Analytics](https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics#tracking_fpfcp) - watch out! this is Chrome 60+ only
 
-### 😵 load abandonment
+## 😵 load abandonment
 
 [Example - tracking `visibilitychange`](https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics#load_abandonment)
 
