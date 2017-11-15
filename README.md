@@ -36,7 +36,7 @@ my current main client: [HomeAway.com](https://www.homeaway.com/)
 
 ### 👫 user-centric metrics
 
-[Leveraging the Performance Metrics that Most Affect User Experience](https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics) by @philipwalton / Google
+the idea from [Leveraging the Performance Metrics that Most Affect User Experience](https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics) by @philipwalton / Google
 
 🔜 is it happening? 🤔 is it meaningful? 👆 is it usable? 🥃 is it smooth?
 
