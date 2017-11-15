@@ -396,11 +396,11 @@ are long tasks blocking the main thread?
 
 Note:
 
-* the browser responds to user input by adding tasks to a task queue
+* user input: adding tasks to a task queue
 
 * the main thread will then execute them one by one
 
-* your apps JS will execute on the main thread
+* your apps JS will also execute on the main thread
 
 * this can block the main thread like our react app booting there
 
