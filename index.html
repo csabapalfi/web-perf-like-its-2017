@@ -90,6 +90,7 @@
 			</div>
 		</div>
 
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
@@ -103,13 +104,33 @@
 				backgroundTransition: 'slide',
 				transitionSpeed: 'fast', 
 				slideNumber: 'c/t',
+				talkVideo: {
+					animateOnStart: true,
+					// slideTimeMap: slideTimeMap,
+					youtubeVideoId: '83zTcw7jecY', // <--- replace with own video ID
+					playerWidth: 300,
+					playerHeight: 168,
+					playerAutoStart: true,
+					playerAutoStartOnlyOnFirstSlide: true
+				},
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/talkvideo/talkvideo.js' }
 				]
 			});
 		</script>
+		<style>
+			.reveal-talkvideo iframe {
+				position: fixed;
+				left: 15px;
+				bottom: 15px;
+			}
+		</style>
+		<div class="reveal-talkvideo">
+			<div id="reveal-talkvideo-player"></div>
+		</div>
 	</body>
 </html>
