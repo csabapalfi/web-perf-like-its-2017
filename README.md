@@ -12,6 +12,12 @@ Slides built with reveal.js, hosted via Github Pages:
 
 https://csabapalfi.github.io/web-perf-like-its-2017/
 
+# video
+
+The talk is [available on YouTube](https://www.youtube.com/watch?v=7ufRZ8ABagw).
+
+
+
 # references
 
 ## ⚡ = 💰 performance is money
