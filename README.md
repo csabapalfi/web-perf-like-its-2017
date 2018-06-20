@@ -1,11 +1,5 @@
 # Web Perf like it's 2017
 
-Everything is changing so fast: new devices, JS framework of the day, the expectations of our users. How do we respond?
-
-What's the current state of the art in web performance analytics? What's worth measuring and how? What are some common pain points?
-
-Let's find out!
-
 # slides
 
 Slides built with reveal.js, hosted via Github Pages:
@@ -15,8 +9,6 @@ https://csabapalfi.github.io/web-perf-like-its-2017/
 # video
 
 The talk is [available on YouTube](https://www.youtube.com/watch?v=7ufRZ8ABagw).
-
-
 
 # references
 
@@ -35,6 +27,8 @@ used to work with [YLD](https://www.yld.io/) who organized the meetup
 my current main client: [HomeAway.com](https://www.homeaway.com/)
 
 ## 🏁 'classic' metrics
+
+nothing to do with UX :( 
 
 [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded)
 
@@ -56,13 +50,13 @@ the idea from [Leveraging the Performance Metrics that Most Affect User Experien
 
 [`PerformanceObserver`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver) in the browser
 
-## 🔜 first pixel on the screen?
+## 🔜 happening? - first pixel on the screen?
 
 [Definition - Start Render - webpagetest](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics)
 
 [Spec - Paint Timing](https://w3c.github.io/paint-timing/)
 
-## 🤔 above the fold rendered?
+## 🤔 meaningful? - above the fold rendered?
 
 [Definition - Visually Complete - webpagetest](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index) - this is on the Speed Index page of the docs
 
@@ -71,7 +65,7 @@ the idea from [Leveraging the Performance Metrics that Most Affect User Experien
 [Spec - First Meaningful Paint](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view)
 
 
-## 🤔 speed index
+## 🤔 meaningful? - speed index
 
 Speed Index a metric not mentioned in the talk but related to measuring rendering progress.
 
@@ -81,7 +75,7 @@ Speed Index a metric not mentioned in the talk but related to measuring renderin
 
 [Speed Perception and Lighthouse](https://ldnwebperf.org/events/speed-perception-and-lighthouse/) by @estelle - LdnWebPerf talk about Speed index
 
-## 🤔 hero element timing
+## 🤔 meaningful? hero element timing
 
 [W3C github issue - Element Timing API](https://github.com/w3c/charter-webperf/issues/30)
 
@@ -91,7 +85,7 @@ Speed Index a metric not mentioned in the talk but related to measuring renderin
 
 [Polyfill - Hero Element Timing](https://github.com/tdresser/hero-element-polyfill) - see also the [announcement here](https://groups.google.com/a/chromium.org/forum/m/#!topic/progressive-web-metrics/ND6JVZRWqqg)
 
-## 👆 JS loaded to make elements interactive?
+## 👆 usable? JS loaded to make elements interactive?
 
 [Spec - User Timing](https://www.w3.org/TR/user-timing/)
 
@@ -101,7 +95,7 @@ Speed Index a metric not mentioned in the talk but related to measuring renderin
         }
 ``` 
 
-## 👆 first interactive (time to interactive)
+## 👆 usable? - first interactive (time to interactive)
 
 [Definition - Time to Interactie - webpagetest](https://github.com/WPO-Foundation/webpagetest/blob/master/docs/Metrics/TimeToInteractive.md)
 
@@ -113,7 +107,11 @@ Speed Index a metric not mentioned in the talk but related to measuring renderin
 
 [Polyfill - First Interactive](https://github.com/GoogleChromeLabs/tti-polyfill)
 
-## 🥃 input latency
+## 👆 usable? - first input delay
+
+['Polyfill' - First Input Delay](https://github.com/GoogleChromeLabs/first-input-delay)
+
+## 🥃 smooth? - input latency
 
 [Definition - Estimated Input Latency - Lighthouse](https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency)
 
