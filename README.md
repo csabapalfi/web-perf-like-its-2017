@@ -12,7 +12,7 @@ The talk is [available on YouTube](https://www.youtube.com/watch?v=7ufRZ8ABagw)
 
 ## references
 
-### [all metrics links are now here](https://github.com/csabapalfi/awesome-web-performance-metrics)
+### [all metrics links are now under csabapalfi/awesome-web-performance-metrics](https://github.com/csabapalfi/awesome-web-performance-metrics)
 
 ### ⚡ = 💰 performance is money
 
